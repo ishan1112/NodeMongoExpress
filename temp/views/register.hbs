@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">		  
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<div class="container">
+		 <nav class="nav justify-content-center">
+          <a class="nav-link active mt-2" href="/index">Home</a>
+        </nav>
+		<h1>Registration</h1>
+		<nav>
+			{{>navbar}}
+		</nav>
+		<form action="/reg" method="post">
+			<label for="fname"><i class="fa fa-user"></i> First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+
+			<label for="lname"><i class="fa fa-user"></i> Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+
+			<label><i class="fa fa-male"></i> Gender:</label>
+			<label class="radio-inline">
+				<input type="radio" name="gender" value="male" checked> Male
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="gender" value="female"> Female
+			</label>
+
+			<label for="email"><i class="fa fa-envelope"></i> Email</label>
+			<input type="email" id="email" name="email" placeholder="Enter your email">
+
+			<label for="phone"><i class="fa fa-phone"></i> Phone Number</label>
+			<input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+			<label for="password"><i class="fa fa-lock"></i> Password</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password">
+
+			<label for="confirm_password"><i class="fa fa-lock"></i> Confirm Password</label>
+			<input type="password" id="confirm_password" name="confirmPassword" placeholder="Confirm your password">
+
+			<button type="submit" class="registerbtn">Register</button>
+		</form>
+		<div class="toggle">
+			<p>Already have an account? <a href="/login">Login here</a>.</p>
+		</div>
+	</div>
+</body>
+</html>
